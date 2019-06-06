@@ -1,0 +1,49 @@
+---
+title: "INDEX"
+author: "jene"
+date: "6 de junio de 2019"
+output: html_document
+---
+####Reading data from the source
+
+```
+knitr::opts_chunk$set(echo = TRUE)
+library(caret,warn.conflicts=F, quietly=T)
+library(parallel,warn.conflicts=F, quietly=T)
+library(doParallel,warn.conflicts=F, quietly=T)
+library(rattle,warn.conflicts=F, quietly=T)
+library(ggplot2)
+library(plotly)
+```
+### LEYENDO LA DATA
+```{r cachedChunk, cache=TRUE}
+datos <- read.csv("C:/r/Noveno_Curso/gas1/daily.csv", sep=",",stringsAsFactors = FALSE, heade=T)
+```
+### LENDO LAS CABECERAS
+```{r}
+head(datos)
+```
+### CONTANDO LA CANTIDAD DE FILAS Y COLUMNAS
+```{r}
+dim(datos)
+```
+
+####viendo la  estructura de los datos
+```{r}
+str(datos)
+```
+###Titulos a las variable
+```{r}
+
+str(datos)
+x <- list(title = "Años")
+y <- list(title = "Precio en dolares")
+```
+
+### Including Plots
+
+
+
+```{r pressure, echo=FALSE}
+plot_ly(datos, x = ~as.Date(Date), y = ~Price, mode = 'lines',type='scatter', marker = list(color = "blue")) 
+```

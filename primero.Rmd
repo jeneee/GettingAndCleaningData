@@ -1,4 +1,4 @@
---
+---
 title: "Untitled"
 author: "jene"
 date: "6 de junio de 2019"
@@ -7,7 +7,7 @@ output: html_document
 ```
 
 library(leaflet)
-
+librry(shyni)
 ```
 
 
@@ -18,10 +18,9 @@ my_map <- leaflet() %>% addTiles( )
 
 my_map <- my_map %>% addTiles( "mY PERU" ) 
 
-my_map <- my_map %>% addMarkers(lat=-9.1899672 , lng=-75.015152  , popup="MAPA DEL PERU")
+my_map <- my_map %>% addMarkers(lat=-12.0431805 , lng=-77.0282364  , popup="MAPA DEL PERU")
 
 
 my_map
 
 ```
-
